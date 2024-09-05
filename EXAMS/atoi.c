@@ -1,10 +1,11 @@
+//atoi sınavda eğer birden fazla negatif(-) ifade varsa 0 döndürmemizi istiyor.
 
 int	atoi(char *str)
 {
 	int	i;
 	int	sign;
 	int	result;
-	int cont;
+	int cont; //birden fazla - saydırıp saydırmadığımızı kontrol etmek için bir kontrolcü tanımladık.
 
 	i = 0;
 	sign = 1;
@@ -17,7 +18,7 @@ int	atoi(char *str)
 		if (str[i] == '-')
 		{
 			sign *= -1;
-			cont++;
+			cont++; //her '-' için 1 arttırdık.
 		}
 		i++;
 	}
@@ -27,7 +28,7 @@ int	atoi(char *str)
 		result += str[i] - 48;
 		i++;
 	}
-	if (cont > 1)
+	if (cont > 1) //eğer 1'den fazla ise 0 döndürecek.
 		return 0;
 	return (result * sign);
 }
