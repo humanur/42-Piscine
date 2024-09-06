@@ -7,10 +7,10 @@ void ft_print_even(char *str)
 	{
 		if (i % 2 == 0) 
 		{
-            printf("%c", str[i]);
-        }
-        i++;
-    }
+            	   printf("%c", str[i]);
+        	}
+        	i++;
+    	}
 }
 
 int main(int argc, char *argv[]) 
